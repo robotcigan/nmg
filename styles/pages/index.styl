@@ -1,0 +1,118 @@
+html, body
+  background-color #F4F4F8
+  height 100%
+  overflow hidden
+  width 100%
+
+
+#particle-slider
+  height 100vh
+  width 100vw
+  position absolute
+  z-index 200
+
+
+.header
+  display flex
+  justify-content center
+  position absolute
+
+
+.circle
+  border 4px solid rgba($main, .1)
+  border-radius 50%
+  bottom 0
+  circle(64rem)
+  content ''
+  left 0
+  margin auto
+  position absolute
+  right 0
+  top 0
+  .link
+    align-items center
+    cursor pointer
+    display flex
+    margin-bottom 0
+    position absolute
+    z-index 200
+    &:nth-child(1)
+      left -78px
+      text-align right
+      top 55px
+    &:nth-child(2)
+      left 500px
+      top 55px
+    &:nth-child(3)
+      left 500px
+      top 542px
+    &:nth-child(4)
+      left -60px
+      text-align right
+      top 542px
+    .button
+      align-items center
+      
+      border-radius 32px
+      display flex
+      padding 8px
+      padding-left 16px
+      position relative
+      z-index 300
+      & + .link__text
+        margin-left 1.2rem
+    &__img
+      & + .link__text
+        margin-left 1.2rem
+    &__text
+      position relative
+      z-index 20
+      & + .link__img
+        margin-left 1.2rem
+      & + .plus,
+      & + .button
+        margin-left 1.2rem
+    &__big-img
+      opacity 0
+      left 88px
+      position absolute
+      top -80px
+      transform scale(0.9)
+      transition all .3s ease
+      z-index 0
+    &:hover
+      color $main
+      .link
+        &__big-img
+          opacity 1
+          transform none
+        &__text
+          color #fff
+      .button
+        background-color #054798
+
+
+.plus
+  align-items center
+  background-color #F4F4F8
+  border 3px solid #054798
+  circle(36px)
+  border-radius 50%
+  display flex
+  justify-content center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

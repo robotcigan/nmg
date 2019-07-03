@@ -1,0 +1,202 @@
+.mfp-close-btn-in .mfp-close,
+.mfp-close-btn-in .mfp-close:active
+  // background-color $primary
+  circle(4rem)
+  color #fff
+  font-size 4rem
+  opacity 1
+  padding 0
+  text-align center
+  top -4rem
+  right -4rem
+
+.mfp-close
+  circle(6rem)
+
+.open-image
+  display block
+
+.mfp-gallery .mfp-close,
+.mfp-gallery .mfp-close:active
+  color #fff
+  right 0
+  top -.4rem
+
+.mfp-container
+  padding 0
+
+.modal
+  // animation bigFadeUp .5s forwards ease
+  background #fff
+  box-shadow 0 1rem 2rem rgba($main, .1)
+  border-radius $radius
+  display none
+  margin 0 auto
+  padding 4rem
+  position relative
+  width 72rem
+  &__title
+    font-size 2.4rem
+    font-weight 500
+    line-height 1
+    margin-bottom 4rem
+  &--video,
+  &--text
+    background-color transparent
+    box-shadow none
+    padding 0
+    height 80vh
+    .mfp-close,
+    .mfp-close:active
+      color #fff
+      top 0
+      right 0
+    img
+      max-width 100%
+  &__video
+    display flex
+    justify-content center
+    height 100%
+    width initial
+    video
+      height 100%
+  &__header
+    font-size 3.2rem
+    font-weight 600
+    margin-bottom .75em
+  &--small
+    width 54rem
+
+.modal--one-click-buy
+  .ocb
+    align-items center
+    background-color $light-gray
+    border-top $border
+    border-bottom $border
+    display flex
+    justify-content space-between
+    margin-bottom 2rem
+    margin-left -4rem
+    margin-right -4rem
+    padding 1.6rem 4rem
+    &__img
+      border-radius $radius
+      max-height 6rem
+      overflow hidden
+      width 8rem
+      img
+        display block
+        width 100%
+    &__container
+      max-width 45%
+      p
+        margin-bottom 0
+    &__tech
+      color $gray
+      font-size 1.4rem
+      margin-bottom .4em
+    &__price
+      font-size 2rem
+
+.modal--big-card
+  max-width 1350px
+  top 0
+  width 94%
+  .big-card
+    &__right
+      position relative
+      top 2rem
+
+.modal--city
+  .city
+    display flex
+    flex-wrap wrap
+    margin-bottom 2rem
+    &__container
+      &:not(:last-child)
+        margin-right 4.8rem
+
+// .mfp-fade
+//   .modal
+//     animation bigFadeDown .5s forwards ease
+.mfp-fade
+  &.mfp-bg
+    opacity 0
+    transition all .2s ease-out
+    &.mfp-ready
+      opacity .8
+    &.mfp-removing
+      transition all .2s ease-out .2s
+      opacity 0
+  &.mfp-wrap
+    .mfp-content
+      opacity 0
+      transform translateY(10rem)
+      transition all .3s ease-out .2s
+    &.mfp-ready
+      .mfp-content
+        opacity 1
+        transform none
+    &.mfp-removing
+      .mfp-content
+        opacity 0
+        transform translateY(10rem)
+        transition all .3s ease-out
+
+
+.mfp-ready
+  .modal
+    display block
+
+@media(max-width 1000px)
+  .modal--big-card
+    top 2rem
+
+@media(max-width 767px)
+  .mfp-container
+    padding 0
+  .modal
+    padding 2.4rem 4%
+    right 0
+    width 94%
+    .mfp-close,
+    .mfp-close:active
+      font-size 4rem
+      opacity 1
+      top 1.4rem
+      right .4rem
+    &__header
+      font-size 2.4rem
+    &--one-click-buy
+      .ocb
+        margin-left -4%
+        margin-right -4%
+        padding 1.6rem 4%
+
+@media(max-width 500px)
+  .modal
+    &--one-click-buy
+      .ocb
+        flex-wrap wrap
+        &__img
+          margin-bottom 2rem
+          margin-right 1rem
+          order 1
+          width 50%
+        &__name
+          display block
+          font-size 1.4rem
+          width 100%
+        &__info
+          order 2
+          width 40%
+        &__container
+          order 3
+          flex-shrink 0
+          flex-basis 100%
+          width 100%
+
+@media(max-width 370px)
+  .modal
+    &__header
+      font-size 2rem
